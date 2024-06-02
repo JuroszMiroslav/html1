@@ -1,10 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of Fruits</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f2f2f2;
+        }
+        .container {
+            background-color: #f7b3b3;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+        }
+        ol {
+            list-style-type: decimal;
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            background-color: #d17b7b;
+            margin: 10px 0;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 5px;
+        }
+        li .text {
+            background-color: #b56262;
+            padding: 10px;
+            flex: 1;
+            margin-left: 10px;
+            border-radius: 5px;
+            color: white;
+        }
+        li.special {
+            background-color: #a44c4c;
+        }
+    </style>
 </head>
 <body>
-$END$
+    <div class="container">
+        <ol>
+            <li>
+                <span>1.</span>
+                <span class="text">Apple</span>
+            </li>
+            <li>
+                <span>2.</span>
+                <span class="text">Orange</span>
+            </li>
+            <li class="special">
+                <span>3.</span>
+                <span class="text">Pineapple</span>
+            </li>
+            <li>
+                <span>4.</span>
+                <span class="text">Pear</span>
+            </li>
+            <li>
+                <span>5.</span>
+                <span class="text">Cherry</span>
+            </li>
+        </ol>
+    </div>
 </body>
 </html>

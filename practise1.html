@@ -1,10 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seasons List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f2f2f2;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+        .season {
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .season::before {
+            content: "\25B6";
+            padding-right: 5px;
+            font-size: 12px;
+        }
+        .icon {
+            padding-right: 5px;
+        }
+    </style>
 </head>
 <body>
-$END$
+    <div class="container">
+        <h1>Seasons</h1>
+        <ul>
+            <li class="season">Winter
+                <ul>
+                    <li><span class="icon">❄️</span>December</li>
+                    <li><span class="icon">❄️</span>January</li>
+                    <li><span class="icon">❄️</span>February</li>
+                </ul>
+            </li>
+            <li class="season">Spring
+                <ul>
+                    <li><span class="icon">🌸</span>March</li>
+                    <li><span class="icon">🌸</span>April</li>
+                    <li><span class="icon">🌸</span>May</li>
+                </ul>
+            </li>
+            <li class="season">Summer
+                <ul>
+                    <li><span class="icon">🏖️</span>June</li>
+                    <li><span class="icon">🏖️</span>July</li>
+                    <li><span class="icon">🏖️</span>August</li>
+                </ul>
+            </li>
+            <li class="season">Autumn
+                <ul>
+                    <li><span class="icon">🍂</span>September</li>
+                    <li><span class="icon">🍂</span>October</li>
+                    <li><span class="icon">🍂</span>November</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
 </body>
 </html>

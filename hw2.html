@@ -1,10 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My To Do List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            text-align: center;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        li:nth-child(odd) {
+            background-color: #e7f3f8;
+        }
+        li:nth-child(even) {
+            background-color: #cfe7ef;
+        }
+        li.checked {
+            background-color: #e9ecef;
+            text-decoration: line-through;
+        }
+        li span {
+            color: red;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-$END$
+    <div class="container">
+        <h1>My To Do List</h1>
+        <ul>
+            <li>
+                <input type="checkbox" onclick="toggleChecked(this)">
+                Hit the gym
+                <span>&#10006;</span>
+            </li>
+            <li class="checked">
+                <input type="checkbox" checked onclick="toggleChecked(this)">
+                Pay bills
+                <span>&#10006;</span>
+            </li>
+            <li>
+                <input type="checkbox" onclick="toggleChecked(this)">
+                Meet John
+                <span>&#10006;</span>
+            </li>
+            <li>
+                <input type="checkbox" onclick="toggleChecked(this)">
+                Buy eggs
+                <span>&#10006;</span>
+            </li>
+            <li class="checked">
+                <input type="checkbox" checked onclick="toggleChecked(this)">
+                Read a book
+                <span>&#10006;</span>
+            </li>
+            <li>
+                <input type="checkbox" onclick="toggleChecked(this)">
+                Organize office
+                <span>&#10006;</span>
+            </li>
+            <li>
+                <input type="checkbox" onclick="toggleChecked(this)">
+                Eat dinner
+                <span>&#10006;</span>
+            </li>
+            <li>
+                <input type="checkbox" onclick="toggleChecked(this)">
+                Buy apples
+                <span>&#10006;</span>
+            </li>
+            <li>
+                <input type="checkbox" onclick="toggleChecked(this)">
+                Meet George
+                <span>&#10006;</span>
+            </li>
+            <li>
+                <input type="checkbox" onclick="toggleChecked(this)">
+                Feed the cat
+                <span>&#10006;</span>
+            </li>
+            <li class="checked">
+                <input type="checkbox" checked onclick="toggleChecked(this)">
+                Write a letter
+                <span>&#10006;</span>
+            </li>
+            <li>
+                <input type="checkbox" onclick="toggleChecked(this)">
+                Run 1 km
+                <span>&#10006;</span>
+            </li>
+        </ul>
+    </div>
+    <script>
+        function toggleChecked(checkbox) {
+            const listItem = checkbox.parentElement;
+            if (checkbox.checked) {
+                listItem.classList.add('checked');
+            } else {
+                listItem.classList.remove('checked');
+            }
+        }
+    </script>
 </body>
 </html>
